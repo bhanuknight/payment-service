@@ -2,26 +2,23 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
 
-## Development server
+## Test project for Filed
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Project Requirements:
 
-## Code scaffolding
+Write an angular application with the following requirements
+1. Create DTO like this which will be used to make requests
+    - creditCardNumber (mandatory, string)
+    - cardholder (mandatory, string)
+    - expirationDate (mandatory, Date, cannot be in the past)
+    - securityCode (optional, string, 3 digits)
+    - amount (mandatory, number, must be greater than 0)
+2. Write a Payment service with a function that creates a POST request.
+3. Create a new page and a new component (to be used in this page) with inputs for the DTO
+   created at point 1, and add validations on these inputs based on the mandatory or optional
+   parameters described. Create a button with a click event and call the payment service
+   method.
+4. In the app.component.html, create a button (name it anyway you like) or an <a> and use
+   the angular router to navigate to the new page created at the previous point.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
