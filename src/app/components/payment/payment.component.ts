@@ -9,6 +9,8 @@ import { CommonService } from '../../services/commmon.service';
 })
 export class PaymentComponent implements OnInit {
 
+  showLoader: boolean;
+
   month: number;
   year: number;
 
@@ -46,8 +48,14 @@ export class PaymentComponent implements OnInit {
     } else {
       payload['expirationDate'] = payload['expirationDate']['month'] + '/' + payload['expirationDate']['year'];
     }
+    this.showLoader = true;
+    this.service.sendDTO(payload).subscribe(res => {
+      this.showLoader = false;
+      alert(res);
+    }, (err) => {
+      this.showLoader = false;
+      alert(err);
+    });
 
-    console.log(payload);
-    
   }
 }
