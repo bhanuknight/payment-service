@@ -1,0 +1,13 @@
+<div class="main-box">
+  <div class="center-box">
+    <div class="title">
+      <h2>Start payment</h2>
+    </div>
+    <div class="body">
+      <div class="button-wrapper" *ngIf="!showButton">
+        <button (click)="navigateToPayment()">Click here</button>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
